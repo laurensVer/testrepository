@@ -1,0 +1,28 @@
+Sudo mariadb  password
+Create database vacation  show databases
+GRANT ALL ON vacation.* TO laurens(v)@localhost
+Ctrl + d
+Mariadb vacation < Downloads/vacation.sql
+mariadb
+
+query 1
+select guestname, guestaddress from guest where guestaddress like "%Londen"
++--------------+--------------------+
+| guestname    | guestaddress       |
++--------------+--------------------+
+| John Kay     | 56 High St, London |
+| Mike Ritchie | 18 Tain St, London |
++--------------+--------------------+
+
+query 2
+select type, price from room where price < 40.00 and type != 'single' order by price;
++--------+-------+
+| type   | price |
++--------+-------+
+| double | 15.00 |
+| double | 29.00 |
+| double | 30.00 |
+| family | 35.00 |
+| family | 39.00 |
++--------+-------+
+
